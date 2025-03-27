@@ -6,24 +6,290 @@
     <link rel="stylesheet" href="/src/css/output.css" />
     <title>Products - Admin</title>
   </head>
-  <body>
-    <!-- Nav for Mobile-->
-    <nav
-      class="bg-[#FCF9F2] h-[70px] w-full rounded-b-[15px] flex justify-center items-center px-3"
-    >
-      <!-- header content -->
-      <div class="flex items-center w-full">
-        
-        <!-- hamburger icon -->
-        <img
-          src="/src/images/hamburger-menu-svgrepo-com.png"
-          alt=""
-          class="w-[20px]"
-        />
+  <body class="bg-[#FFDAD4]">
+    <!-- Dark Overlay -->
+    <div
+      id="dark-overlay"
+      class="fixed inset-0 bg-black opacity-30 hidden"
+    ></div>
 
-        <!-- logo -->
-        <img src="/src/images/logoPinkWords.png" alt="" class="w-[83px]" />
+    <div class="flex w-screen h-screen">
+      <!-- Sidebar Mobile -->
+      <div
+        id="categories-sidebar"
+        class="fixed left-0 top-0 h-full w-full md:w-120 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 flex flex-col"
+      >
+        <div class="h-[85px] bg-[#D2A49C] flex items-center px-4 relative">
+          <div class="absolute left-1/2 -translate-x-1/2">
+            <img
+              src="/src/images/logoWhiteWords.png"
+              alt=""
+              class="w-[130px]"
+            />
+          </div>
+          <div
+            class="flex justify-center items-center p-2 rounded-md cursor-pointer hover:bg-[#c49589] ml-auto"
+            id="close2"
+          >
+            <img
+              src="/src/images/x-symbol-svgrepo-com.svg"
+              alt=""
+              class="w-3"
+            />
+          </div>
+        </div>
+
+        <!-- Sidebar Links -->
+        <ul class="p-4 flex flex-col gap-1">
+          <li>
+            <a
+              href="/src/admin/pages/dashboard.html"
+              class="flex items-center gap-2 text-gray-600 hover:text-[#D2A49C] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#374151"
+                stroke-width="0.576"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z"
+                    fill="#374151"
+                  />
+                </g>
+              </svg>
+              <span class="text-[#374151] font-semibold">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/src/admin/pages/products.html"
+              class="flex items-center gap-2 text-[#D2A49C] font-semibold bg-[#f8e8e6] p-2 rounded-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.4856 1.12584C12.1836 0.958052 11.8164 0.958052 11.5144 1.12584L2.51436 6.12584L2.5073 6.13784L2.49287 6.13802C2.18749 6.3177 2 6.64568 2 7V16.9999C2 17.3631 2.19689 17.6977 2.51436 17.874L11.5022 22.8673C11.8059 23.0416 12.1791 23.0445 12.4856 22.8742L21.4856 17.8742C21.8031 17.6978 22 17.3632 22 17V7C22 6.64568 21.8125 6.31781 21.5071 6.13813C21.4996 6.13372 21.4921 6.12942 21.4845 6.12522L12.4856 1.12584ZM5.05923 6.99995L12.0001 10.856L14.4855 9.47519L7.74296 5.50898L5.05923 6.99995ZM16.5142 8.34816L18.9409 7L12 3.14396L9.77162 4.38195L16.5142 8.34816ZM4 16.4115V8.69951L11 12.5884V20.3004L4 16.4115ZM13 20.3005V12.5884L20 8.69951V16.4116L13 20.3005Z"
+                  fill="#D2A49C"
+                />
+              </svg>
+              <span>Products</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/src/admin/pages/sales.html"
+              class="flex items-center gap-2 text-[#374151] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                  stroke="#374151"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span class="font-semibold">Sales</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+
+      <!-- Sidebar -->
+      <div class="hidden lg:block w-70 flex justify-center items-center p-6">
+        <!-- Sidebar Card -->
+        <div class="w-full h-full bg-[#FCF9F2] rounded-[15px] flex flex-col">
+          <!-- Logo -->
+          <div
+            class="h-[85px] bg-[#D2A49C] rounded-t-[15px] flex justify-center items-center"
+          >
+            <img
+              src="/src/images/logoWhiteWords.png"
+              alt=""
+              class="w-[130px]"
+            />
+          </div>
+
+          <!-- Sidebar Links -->
+          <ul class="p-4 flex flex-col gap-1">
+            <li>
+              <a
+                href="/src/admin/pages/dashboard.html"
+                class="flex items-center gap-2 text-gray-600 hover:text-[#D2A49C] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#374151"
+                  stroke-width="0.576"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z"
+                      fill="#374151"
+                    />
+                  </g>
+                </svg>
+                <span class="text-[#374151] font-semibold">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/admin/pages/products.html"
+                class="flex items-center gap-2 text-[#D2A49C] font-semibold bg-[#f8e8e6] p-2 rounded-lg"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.4856 1.12584C12.1836 0.958052 11.8164 0.958052 11.5144 1.12584L2.51436 6.12584L2.5073 6.13784L2.49287 6.13802C2.18749 6.3177 2 6.64568 2 7V16.9999C2 17.3631 2.19689 17.6977 2.51436 17.874L11.5022 22.8673C11.8059 23.0416 12.1791 23.0445 12.4856 22.8742L21.4856 17.8742C21.8031 17.6978 22 17.3632 22 17V7C22 6.64568 21.8125 6.31781 21.5071 6.13813C21.4996 6.13372 21.4921 6.12942 21.4845 6.12522L12.4856 1.12584ZM5.05923 6.99995L12.0001 10.856L14.4855 9.47519L7.74296 5.50898L5.05923 6.99995ZM16.5142 8.34816L18.9409 7L12 3.14396L9.77162 4.38195L16.5142 8.34816ZM4 16.4115V8.69951L11 12.5884V20.3004L4 16.4115ZM13 20.3005V12.5884L20 8.69951V16.4116L13 20.3005Z"
+                    fill="#D2A49C"
+                  />
+                </svg>
+                <span>Products</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/admin/pages/sales.html"
+                class="flex items-center gap-2 text-[#374151] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                    stroke="#374151"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="font-semibold">Sales</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-1 lg:pr-6 lg:pt-6 lg:pb-6">
+        <!-- Nav for Mobile-->
+        <nav
+          class="bg-[#FCF9F2] h-[70px] w-full rounded-b-[15px] flex justify-center items-center px-5 lg:rounded-t-[15px]"
+        >
+          <!-- header content MOBILE -->
+          <div
+            class="flex items-center w-full justify-between lg:justify-start"
+          >
+            <!-- logo & hamburgere -->
+            <div class="flex gap-1 items-center">
+              <!-- hamburger icon -->
+              <img
+                src="/src/images/hamburger-menu-svgrepo-com.png"
+                alt=""
+                class="w-[20px] h-[20px] cursor-pointer lg:hidden"
+                id="sidebar"
+              />
+
+              <!-- logo -->
+              <img
+                src="/src/images/logoPinkWords.png"
+                alt=""
+                class="w-[83px] lg:hidden"
+              />
+            </div>
+
+            <!-- Products  -->
+            <div class="font-semibold text-xl">Products</div>
+          </div>
+        </nav>
+
+        <!-- main -->
+        <div class="px-5 mt-6 lg:px-0 h-[calc(100%-94px)] flex flex-col">
+          <!-- Products Card -->
+          <div class="bg-[#FCF9F2] w-full h-full rounded-3xl flex flex-col">
+            <!-- Card Header -->
+            <div
+              class="w-full h-15 bg-[#D2A49C] rounded-t-3xl flex items-center px-4 justify-between"
+            >
+              <!-- Products catalogue text -->
+              <div class="text-[#FCF9F2] font-bold">Products Catalogue</div>
+
+              <!-- Add btn -->
+              <div
+                class="w-[52px] h-[18px] bg-[#FCF9F2] flex justify-center items-center rounded-md p-3 text-sm cursor-pointer"
+              >
+                Add
+              </div>
+            </div>
+            <!-- Products -->
+            <div class="w-full p-4">
+              <!-- products -->
+
+              <!-- Product 1 -->
+              <div class="border-b border-gray-300 py-2">
+                <div class="flex flex-col">
+                  <div class="font-semibold">Product 1</div>
+                  <div class="text-sm font-light text-gray-600">
+                    SKU: PRD-1000
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="/src/js/sidebar.js"></script>
 </html>
