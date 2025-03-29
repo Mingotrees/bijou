@@ -258,11 +258,11 @@
 
         <!-- main -->
         <div
-          class="px-5 mt-6 lg:px-0 h-[calc(100%-94px)] flex flex-col gap-6 lg:grid lg:grid-cols-2"
+          class="px-5 mt-6 lg:px-0 h-[calc(100%-94px)] flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:grid-rows-[0.5fr_1.5fr_3fr]"
         >
           <!-- Revenue Card -->
           <div
-            class="bg-pinkish-white w-full h-[130px] rounded-3xl drop-shadow-lg"
+            class="bg-pinkish-white w-full h-[130px] lg:h-[135px] rounded-3xl drop-shadow-lg"
           >
             <!-- header -->
             <div
@@ -299,96 +299,105 @@
             <div
               class="px-5 h-[67%] flex justify-center items-center gap-5 text-[#D2A49C]"
             >
-              <div class="text-5xl font-bold">
+              <div class="text-5xl lg:text-4xl font-bold">
                 Php <span id="amount">200,000.00</span>
               </div>
             </div>
           </div>
 
-          <!-- Order Summary Card -->
-          <div
-            class="bg-pinkish-white w-full h-[230px] rounded-3xl drop-shadow-lg"
-          >
-            <!-- header -->
+          <!-- lg query for row 2 -->
+          <div class="lg:col-span-2 lg:grid lg:grid-cols-2">
+            <!-- Order Summary Card -->
             <div
-              class="w-full h-[20%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
+              class="bg-pinkish-white w-full h-[230px] rounded-3xl drop-shadow-lg"
             >
-              <h2 class="text-pinkish-white">Order Summary</h2>
-            </div>
-            <!-- text-content -->
-            <div
-              class="px-5 pb-2 h-[80%] flex justify-evenly items-center text-[#D2A49C]"
-            >
-              <!-- pending card -->
+              <!-- header -->
               <div
-                class="w-[150px] h-[140px] text-red-500 rounded-2xl bg-red-200 p-3 flex flex-col justify-between"
+                class="w-full h-[20%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
               >
-                <!-- card content -->
-                <h2
-                  class="text-left text-wrap font-semibold opacity-100 text-[18px]"
-                >
-                  Pending Orders
-                </h2>
-                <h2 class="text-right font-bold text-[50px]">90</h2>
+                <h2 class="text-pinkish-white">Order Summary</h2>
               </div>
-              <!-- completed card -->
+
+              <!-- main content card -->
               <div
-                class="w-[150px] h-[140px] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
+                class="px-5 pb-2 h-[80%] flex justify-evenly items-center text-pink"
               >
-                <!-- card content -->
-                <h2
-                  class="text-left text-wrap font-semibold opacity-100 text-[18px]"
+                <!-- pending card -->
+                <div
+                  class="w-[150px] lg:w-[300px] h-[140px] text-red-500 rounded-2xl bg-red-200 p-3 flex flex-col justify-between mr-2"
                 >
-                  Completed Orders
-                </h2>
-                <h2 class="text-right font-bold text-[50px]">120</h2>
+                  <!-- card content -->
+                  <h2
+                    class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
+                  >
+                    Pending Orders
+                  </h2>
+                  <h2 class="text-right font-bold text-[50px]">90</h2>
+                </div>
+                <!-- completed card -->
+                <div
+                  class="w-[150px] lg:w-[300px] h-[140px] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
+                >
+                  <!-- card content -->
+                  <h2
+                    class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
+                  >
+                    Completed Orders
+                  </h2>
+                  <h2 class="text-right font-bold text-[50px]">120</h2>
+                </div>
               </div>
             </div>
+            <div></div>
           </div>
 
           <!-- Recent Orders Card-->
-          <div
-            class="bg-pinkish-white w-full h-[300px] rounded-3xl drop-shadow-lg"
-          >
+          <div class="col-span-2">
             <div
-              class="w-full h-[20%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
+              class="bg-pinkish-white w-full h-[300px] lg:h-[460px] rounded-3xl drop-shadow-lg"
             >
-              <h2 class="text-pinkish-white">Recent Orders</h2>
-            </div>
-
-            <!-- recent order grid -->
-            <div class="grid grid-cols-4 auto-rows-[40px] gap-1">
-              <!-- header row -->
               <div
-                class="col-span-4 grid grid-cols-4 text-[#BD6D5F] bg-[#F2CBC4] items-center font-semibold border-b-1"
+                class="w-full h-[20%] lg:h-[15%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
               >
-                <div class="flex justify-center">Order Id</div>
-                <div class="flex justify-center">Customer</div>
-                <div class="flex justify-center">Amount</div>
-                <div class="flex justify-center">Status</div>
+                <h2 class="text-pinkish-white">Recent Orders</h2>
               </div>
-              <!-- sample row -->
-              <div
-                class="col-span-4 grid grid-cols-4 items-center font-medium border-b-1"
-              >
-                <div class="flex justify-center">BJ#-0123</div>
-                <div class="flex justify-center">Jhanell Mingo</div>
-                <div class="flex justify-center">Php 250.00</div>
-                <div class="flex justify-center">
-                  <div class="h-full bg-amber-200 text-yellow-700 rounded-2xl">
-                    <h2 class="p-1 text-[14px]">Pending</h2>
+
+              <!-- recent order grid -->
+              <div class="grid grid-cols-4 auto-rows-[40px] gap-1">
+                <!-- header row -->
+                <div
+                  class="col-span-4 grid grid-cols-4 text-[#BD6D5F] bg-[#F2CBC4] items-center font-semibold border-b-1"
+                >
+                  <div class="flex justify-center">Order Id</div>
+                  <div class="flex justify-center">Customer</div>
+                  <div class="flex justify-center">Amount</div>
+                  <div class="flex justify-center">Status</div>
+                </div>
+                <!-- sample row -->
+                <div
+                  class="col-span-4 grid grid-cols-4 items-center font-medium border-b-1"
+                >
+                  <div class="flex justify-center">BJ#-0123</div>
+                  <div class="flex justify-center">Jhanell Mingo</div>
+                  <div class="flex justify-center">Php 250.00</div>
+                  <div class="flex justify-center">
+                    <div
+                      class="h-full bg-amber-200 text-yellow-700 rounded-2xl"
+                    >
+                      <h2 class="p-1 text-[14px]">Pending</h2>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div
-                class="col-span-4 grid grid-cols-4 items-center font-medium border-b-1"
-              >
-                <div class="flex justify-center">BJ#-0123</div>
-                <div class="flex justify-center">Jhanell Mingo</div>
-                <div class="flex justify-center">Php 250.00</div>
-                <div class="flex justify-center">
-                  <div class="h-full bg-green-200 text-green-700 rounded-2xl">
-                    <h2 class="p-1 text-[14px]">Completed</h2>
+                <div
+                  class="col-span-4 grid grid-cols-4 items-center font-medium border-b-1"
+                >
+                  <div class="flex justify-center">BJ#-0123</div>
+                  <div class="flex justify-center">Jhanell Mingo</div>
+                  <div class="flex justify-center">Php 250.00</div>
+                  <div class="flex justify-center">
+                    <div class="h-full bg-green-200 text-green-700 rounded-2xl">
+                      <h2 class="p-1 text-[14px]">Completed</h2>
+                    </div>
                   </div>
                 </div>
               </div>
