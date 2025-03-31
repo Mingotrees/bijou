@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/src/css/output.css" />
     <title>Products - Admin</title>
   </head>
-  <body class="bg-[#FFDAD4] min-h-screen">
+  <body class="bg-[#FFDAD4] min-h-screen overflow-x-hidden">
     <!-- Dark Overlay -->
     <div
       id="dark-overlay"
@@ -256,155 +256,103 @@
           </div>
         </nav>
 
-<<<<<<< HEAD
-        <!-- main -->
-        <div
-          class="px-5 mt-6 lg:px-0 h-[calc(100%-94px)] flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:grid-rows-[0.5fr_1.5fr_3fr]"
-        >
-          <!-- Revenue Card -->
-          <div
-            class="bg-pinkish-white w-full h-[140px] lg:h-[135px] rounded-3xl drop-shadow-lg"
-          >
-            <!-- header -->
-            <div
-              class="w-full h-[50px] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-            >
-              <h2 class="text-pinkish-white">Monthly Revenue</h2>
-            </div>
-            <!-- text-content -->
-            <div
-              class="px-5 h-[90px] flex justify-center items-center gap-3"
-            >
-              <div class="text-[32px] lg: text-5xl text-dark-pink font-bold text-right">
-                Php <span id="amount">75,642</span>
-              </div>
-              <div
-                class="text-[12.5px] text-wrap mt-4 text-left text-green-700 font-semibold"
-              >
-                +10.42% from <br />last month
-              </div>
-            </div>
-          </div>
-
-          <!-- Total Earnings Card -->
-          <div
-            class="bg-pinkish-white w-full h-[135px] rounded-3xl drop-shadow-lg"
-          >
-            <!-- header -->
-            <div
-              class="w-full h-[33%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-            >
-              <h2 class="text-pinkish-white">Total Earnings</h2>
-            </div>
-            <!-- text-content -->
-            <div
-              class="px-5 h-[67%] flex justify-center items-center gap-5 text-[#D2A49C]"
-            >
-              <div class="text-5xl lg:text-4xl font-bold">
-                Php <span id="amount">200,000.00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- lg query for row 2 -->
-          <div class="lg:col-span-2 lg:grid lg:grid-cols-2">
-            <!-- Order Summary Card -->
-            <div
-              class="bg-pinkish-white w-full h-[230px] rounded-3xl drop-shadow-lg"
-=======
         <!-- main content -->
         <div class="flex-1 px-5 mt-6 lg:px-0 flex flex-col gap-5">
-          <div class="flex flex-col lg:flex-row gap-5">
-            <!-- Revenue Card -->
-            <div
-              class="bg-pinkish-white w-full h-[130px] lg:h-[135px] rounded-3xl drop-shadow-lg"
->>>>>>> cri
-            >
-              <!-- header -->
+          <div class="flex flex-col gap-5 lg:flex-row">
+            <div class="flex flex-col gap-5 lg:w-[50%]">
+              <!-- Revenue Card -->
               <div
-                class="w-full h-[33%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
+                class="bg-pinkish-white w-full h-[130px] lg:h-[50%] rounded-3xl drop-shadow-lg"
               >
-                <h2 class="text-pinkish-white">Monthly Revenue</h2>
-              </div>
-              <!-- text-content -->
-              <div class="px-5 h-[67%] flex justify-center items-center gap-3">
+                <!-- header -->
                 <div
-                  class="text-2xl lg:text-4xl text-dark-pink font-bold text-right"
+                  class="w-full h-[35%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
                 >
-                  Php <span id="amount">75,642</span>
+                  <h2 class="text-pinkish-white">Monthly Revenue</h2>
                 </div>
+                <!-- text-content -->
+                <div class="px-5 h-[67%] flex justify-center items-center gap-3">
+                  <div
+                    class="text-2xl lg:text-4xl text-dark-pink font-bold text-right"
+                  >
+                    Php <span id="amount">75,642</span>
+                  </div>
+                  <div
+                    class="text-[12.5px] text-wrap mt-4 text-left text-green-700 font-semibold"
+                  >
+                    +10.42% from <br />last month
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Total Earnings Card -->
+              <div
+                class="bg-pinkish-white w-full h-[135px] lg:h-[50%] rounded-3xl drop-shadow-lg"
+              >
+                <!-- header -->
                 <div
-                  class="text-[12.5px] text-wrap mt-4 text-left text-green-700 font-semibold"
+                  class="w-full h-[35%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
                 >
-                  +10.42% from <br />last month
+                  <h2 class="text-pinkish-white">Total Earnings</h2>
+                </div>
+                <!-- text-content -->
+                <div
+                  class="px-5 h-[67%] flex justify-center items-center gap-5 text-[#D2A49C]"
+                >
+                  <div class="text-2xl lg:text-4xl font-bold">
+                    Php <span id="amount">200,000.00</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Total Earnings Card -->
+            <!-- Order Summary Card -->
             <div
-              class="bg-pinkish-white w-full h-[135px] rounded-3xl drop-shadow-lg"
-            >
-              <!-- header -->
-              <div
-                class="w-full h-[33%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-              >
-                <h2 class="text-pinkish-white">Total Earnings</h2>
-              </div>
-              <!-- text-content -->
-              <div
-                class="px-5 h-[67%] flex justify-center items-center gap-5 text-[#D2A49C]"
-              >
-                <div class="text-2xl lg:text-4xl font-bold">
-                  Php <span id="amount">200,000.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Order Summary Card -->
+          class="bg-pinkish-white w-full lg:w-[50%] h-[230px] rounded-3xl drop-shadow-lg"
+        >
+          <!-- header -->
           <div
-            class="bg-pinkish-white w-full h-[230px] rounded-3xl drop-shadow-lg"
+            class="w-full h-15 bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
           >
-            <!-- header -->
-            <div
-              class="w-full h-15 bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-            >
-              <h2 class="text-pinkish-white">Order Summary</h2>
-            </div>
+            <h2 class="text-pinkish-white">Order Summary</h2>
+          </div>
 
-            <div class="pb-4 pt-4">
-              <!-- main content card -->
+          <div class="pb-4 pt-4">
+            <!-- main content card -->
+            <div
+              class="px-5 pb-2 h-[80%] flex justify-evenly items-center text-pink"
+            >
+              <!-- pending card -->
               <div
-                class="px-5 pb-2 h-[80%] flex justify-evenly items-center text-pink"
+                class="w-[150px] lg:w-[300px] h-[140px] text-red-500 rounded-2xl bg-red-200 p-3 flex flex-col justify-between mr-2"
               >
-                <!-- pending card -->
-                <div
-                  class="w-[150px] lg:w-[300px] h-[140px] text-red-500 rounded-2xl bg-red-200 p-3 flex flex-col justify-between mr-2"
+                <!-- card content -->
+                <h2
+                  class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
                 >
-                  <!-- card content -->
-                  <h2
-                    class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
-                  >
-                    Pending Orders
-                  </h2>
-                  <h2 class="text-right font-bold text-[50px]">90</h2>
-                </div>
-                <!-- completed card -->
-                <div
-                  class="w-[150px] lg:w-[300px] h-[140px] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
+                  Pending Orders
+                </h2>
+                <h2 class="text-right font-bold text-[50px]">90</h2>
+              </div>
+              <!-- completed card -->
+              <div
+                class="w-[150px] lg:w-[300px] h-[140px] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
+              >
+                <!-- card content -->
+                <h2
+                  class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
                 >
-                  <!-- card content -->
-                  <h2
-                    class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
-                  >
-                    Completed Orders
-                  </h2>
-                  <h2 class="text-right font-bold text-[50px]">120</h2>
-                </div>
+                  Completed Orders
+                </h2>
+                <h2 class="text-right font-bold text-[50px]">120</h2>
               </div>
             </div>
           </div>
+            </div>
+          </div>
+          
+
+          
 
           <!-- Recent Orders Card -->
           <div
