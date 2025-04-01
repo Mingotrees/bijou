@@ -3,9 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link href="./css/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">BIJOU</h1>
+  <body class="bg-[#D3A49C] min-h-screen">
+    <!-- NAVBAR -->
+    <nav class="flex items-center w-full">
+      <!-- nav content -->
+      <div class="flex p-5 w-full justify-between items-center">
+        <!-- logo -->
+        <img src="./images/logoWhiteWords.png" alt="" class="w-20" />
+
+        <!-- hamburger icon -->
+        <img
+          src="./images/./hamburgerWhite.png"
+          alt=""
+          class="w-[18px] h-[18px]"
+        />
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="px-5 mt-5">
+      <!-- hero text -->
+      <div
+        class="font-tanNimbus text-white flex flex-col text-[36px] w-[300px]"
+      >
+        <span class="text-shadow">Create your</span>
+        <span class="text-shadow">Custom Buckle</span>
+      </div>
+      <!-- line -->
+      <div class="w-[162.5px] h-[3px] bg-white my-[24px]"></div>
+
+      <!-- CTA BTN -->
+      <div class="flex gap-2 items-center">
+        <!-- btn text -->
+        <div
+          class="w-[184px] h-[42px] bg-white rounded-[7px] flex justify-center items-center"
+        >
+          <span class="font-inria text-[#98665D] font-bold tracking-widest"
+            >Get Started</span
+          >
+        </div>
+
+        <!-- flower -->
+        <img src="./images/flower.png" alt="" class="w-[16px] h-[16px]" />
+      </div>
+    </section>
   </body>
 </html>

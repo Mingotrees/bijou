@@ -1,7 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import url(/src/fonts/TAN-NIMBUS.otf);
 
-@theme{
-    --color-dark-pink: #D2A49C;
-    --color-pink: #FFDAD4;
-    --color-pinkish-white:  #FCF9F2;
+@font-face {
+  font-family: 'tanNimbus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/src/fonts/TAN-NIMBUS.otf') format('opentype'); /* Specify 'opentype' */
+}
+
+@theme {
+  --color-dark-pink: #d2a49c;
+  --color-pink: #ffdad4;
+  --color-pinkish-white: #fcf9f2;
+  --font-tanNimbus: 'tanNimbus', sans-serif;
+  --font-inria: 'Inria Serif', serif;
+}
+
+@utility text-shadow {
+  text-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
 }
