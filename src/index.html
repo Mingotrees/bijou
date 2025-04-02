@@ -12,6 +12,57 @@
     <link href="./css/output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#D3A49C] min-h-screen">
+    <!-- SIDEBAR MOBILE -->
+    <!-- Dark Overlay -->
+    <div
+      id="dark-overlay2"
+      class="fixed inset-0 bg-black opacity-30 hidden"
+    ></div>
+
+    <!-- sideNav -->
+    <div
+      id="navbarSide"
+      class="fixed right-0 top-0 h-full w-full md:w-120 bg-dark-pink shadow-lg transform translate-x-full transition-transform duration-300 flex flex-col p-6"
+    >
+      <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col">
+          <!-- close Icon -->
+          <div>
+            <img
+              src="./images/closeBtnWhite.png"
+              alt=""
+              class="w-[18px] justify-self-end cursor-pointer"
+              id="close2"
+            />
+          </div>
+
+          <!-- navlinks -->
+          <div class="flex flex-col gap-[24px] mt-[59px]">
+            <a href="#home.html" class="text-[24px] text-white">Home</a>
+            <a href="aboutUs.html" class="text-[24px] text-white">About Us</a>
+            <a href="create.html" class="text-[24px] text-white"> Create</a>
+          </div>
+        </div>
+
+        <!-- btn -->
+        <div class="flex flex-col gap-4">
+          <!-- login -->
+          <a
+            class="w-full h-[52px] border border-white rounded-xl flex justify-center items-center text-white text-[18px]"
+          >
+            Log-In
+          </a>
+          <!-- Sign-Up -->
+
+          <div
+            class="w-full h-[52px] border bg-white rounded-xl flex justify-center items-center text-[#E9B1A7] text-[18px]"
+          >
+            Sign Up
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="flex items-center w-full">
       <!-- nav content -->
@@ -23,7 +74,8 @@
         <img
           src="./images/./hamburgerWhite.png"
           alt=""
-          class="w-[18px] h-[18px]"
+          class="w-[18px] h-[18px] cursor-pointer"
+          id="navBtn"
         />
       </div>
     </nav>
@@ -56,4 +108,5 @@
       </div>
     </section>
   </body>
+  <script src="/src/js/sidebar.js"></script>
 </html>
