@@ -812,9 +812,6 @@
   .field-sizing-fixed {
     field-sizing: fixed;
   }
-  .aspect-\[373\/430\] {
-    aspect-ratio: 373/430;
-  }
   .aspect-auto {
     aspect-ratio: auto;
   }
@@ -827,11 +824,14 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
-  .h-\[18px\] {
-    height: 18px;
-  }
   .h-\[20px\] {
     height: 20px;
+  }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
+  .h-\[18px\] {
+    height: 18px;
   }
   .h-\[35\%\] {
     height: 35%;
@@ -851,9 +851,6 @@
   .h-\[85px\] {
     height: 85px;
   }
-  .h-\[100vh\] {
-    height: 100vh;
-  }
   .h-\[130px\] {
     height: 130px;
   }
@@ -865,9 +862,6 @@
   }
   .h-\[230px\] {
     height: 230px;
-  }
-  .h-\[860px\] {
-    height: 860px;
   }
   .h-\[calc\(100\%-94px\)\] {
     height: calc(100% - 94px);
@@ -920,12 +914,6 @@
   .w-\[150px\] {
     width: 150px;
   }
-  .w-\[600px\] {
-    width: 600px;
-  }
-  .w-\[746px\] {
-    width: 746px;
-  }
   .w-full {
     width: 100%;
   }
@@ -961,9 +949,6 @@
   }
   .shrink {
     flex-shrink: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
   }
   .flex-grow {
     flex-grow: 1;
@@ -1381,12 +1366,6 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .gap-\[10px\] {
-    gap: 10px;
-  }
-  .gap-\[35px\] {
-    gap: 35px;
-  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1649,6 +1628,9 @@
   .bg-\[\#f8e8e6\] {
     background-color: #f8e8e6;
   }
+  .bg-\[\.\.\/images\/mobileBijouBG\.png\] {
+    background-color: ../images/mobileBijouBG.png;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
@@ -1699,6 +1681,9 @@
   .bg-radial {
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[url\(\.\.\/images\/mobileBijouBG\.png\)\] {
+    background-image: url(../images/mobileBijouBG.png);
   }
   .bg-none {
     background-image: none;
@@ -1963,10 +1948,6 @@
   .text-\[50px\] {
     font-size: 50px;
   }
-  .leading-\[124\%\] {
-    --tw-leading: 124%;
-    line-height: 124%;
-  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -1983,17 +1964,9 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
-  .font-normal {
-    --tw-font-weight: var(--font-weight-normal);
-    font-weight: var(--font-weight-normal);
-  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .tracking-\[-0\.18px\] {
-    --tw-tracking: -0.18px;
-    letter-spacing: -0.18px;
   }
   .text-balance {
     text-wrap: balance;
@@ -2638,11 +2611,6 @@
       width: 300px;
     }
   }
-  .lg\:w-\[559px\] {
-    @media (width >= 64rem) {
-      width: 559px;
-    }
-  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
@@ -2662,6 +2630,11 @@
     @media (width >= 64rem) {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+    }
+  }
+  .lg\:bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
+    @media (width >= 64rem) {
+      background-image: url(../images/xlBijouBG.png);
     }
   }
   .lg\:px-0 {
@@ -2690,14 +2663,19 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
-  .lg\:text-\[20px\] {
-    @media (width >= 64rem) {
-      font-size: 20px;
-    }
-  }
   .lg\:text-\[22px\] {
     @media (width >= 64rem) {
       font-size: 22px;
+    }
+  }
+  .xl\:bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
+    @media (width >= 80rem) {
+      background-image: url(../images/xlBijouBG.png);
+    }
+  }
+  .xl\:bg-top {
+    @media (width >= 80rem) {
+      background-position: top;
     }
   }
 }
@@ -2829,10 +2807,6 @@
   inherits: false;
 }
 @property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
