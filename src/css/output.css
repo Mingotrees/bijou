@@ -377,6 +377,7 @@
     --color-dark-pink: #D2A49C;
     --color-pink: #FFDAD4;
     --color-pinkish-white: #FCF9F2;
+    --color-darker-pink: #C08181;
   }
 }
 @layer base {
@@ -605,6 +606,12 @@
   .isolation-auto {
     isolation: auto;
   }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-1 {
+    z-index: 1;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -824,14 +831,14 @@
   .h-15 {
     height: calc(var(--spacing) * 15);
   }
-  .h-\[20px\] {
-    height: 20px;
-  }
   .h-\[100vh\] {
     height: 100vh;
   }
   .h-\[18px\] {
     height: 18px;
+  }
+  .h-\[20px\] {
+    height: 20px;
   }
   .h-\[35\%\] {
     height: 35%;
@@ -850,9 +857,6 @@
   }
   .h-\[85px\] {
     height: 85px;
-  }
-  .h-\[90vh\] {
-    height: 90vh;
   }
   .h-\[130px\] {
     height: 130px;
@@ -902,11 +906,17 @@
   .w-\[20px\] {
     width: 20px;
   }
+  .w-\[40px\] {
+    width: 40px;
+  }
   .w-\[52px\] {
     width: 52px;
   }
   .w-\[83px\] {
     width: 83px;
+  }
+  .w-\[100px\] {
+    width: 100px;
   }
   .w-\[100vw\] {
     width: 100vw;
@@ -916,6 +926,12 @@
   }
   .w-\[150px\] {
     width: 150px;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
+  .w-\[300px\] {
+    width: 300px;
   }
   .w-full {
     width: 100%;
@@ -1369,6 +1385,15 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-\[5px\] {
+    gap: 5px;
+  }
+  .gap-\[10px\] {
+    gap: 10px;
+  }
+  .gap-\[12px\] {
+    gap: 12px;
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1475,6 +1500,12 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
+  .rounded-\[3px\] {
+    border-radius: 3px;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
   .rounded-\[15px\] {
     border-radius: 15px;
   }
@@ -1551,6 +1582,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[1px\] {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-x {
     border-inline-style: var(--tw-border-style);
     border-inline-width: 1px;
@@ -1607,11 +1650,17 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-\[\#DBDBDB\] {
+    border-color: #DBDBDB;
+  }
   .border-\[\#F2CBC4\] {
     border-color: #F2CBC4;
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
   }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
@@ -1684,15 +1733,6 @@
   }
   .bg-\[url\(\.\.\/images\/mobileBijouBG\.png\)\] {
     background-image: url(../images/mobileBijouBG.png);
-  }
-  .bg-\[url\(\.\.\/images\/tabBijouBG\.png\)\] {
-    background-image: url(../images/tabBijouBG.png);
-  }
-  .bg-\[url\(\.\.\/images\/xlBijou\.png\)\] {
-    background-image: url(../images/xlBijou.png);
-  }
-  .bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
-    background-image: url(../images/xlBijouBG.png);
   }
   .bg-none {
     background-image: none;
@@ -1851,6 +1891,9 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -1860,8 +1903,14 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -1951,8 +2000,17 @@
   .text-\[12\.5px\] {
     font-size: 12.5px;
   }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
   .text-\[18px\] {
     font-size: 18px;
+  }
+  .text-\[20px\] {
+    font-size: 20px;
   }
   .text-\[50px\] {
     font-size: 50px;
@@ -1972,6 +2030,10 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -2061,6 +2123,9 @@
   }
   .text-dark-pink {
     color: var(--color-dark-pink);
+  }
+  .text-darker-pink {
+    color: var(--color-darker-pink);
   }
   .text-gray-600 {
     color: var(--color-gray-600);
@@ -2233,6 +2298,9 @@
   }
   .opacity-100 {
     opacity: 100%;
+  }
+  .opacity-15 {
+    opacity: 15%;
   }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
@@ -2548,6 +2616,11 @@
   .transform-view {
     transform-box: view-box;
   }
+  .placeholder\:text-\[14px\] {
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
   .hover\:bg-\[\#F2CBC4\]\/10 {
     &:hover {
       @media (hover: hover) {
@@ -2590,6 +2663,21 @@
       }
     }
   }
+  .sm\:w-\[400px\] {
+    @media (width >= 40rem) {
+      width: 400px;
+    }
+  }
+  .sm\:w-\[600px\] {
+    @media (width >= 40rem) {
+      width: 600px;
+    }
+  }
+  .sm\:w-\[1000px\] {
+    @media (width >= 40rem) {
+      width: 1000px;
+    }
+  }
   .sm\:bg-\[url\(\.\.\/images\/tabBijouBG\.png\)\] {
     @media (width >= 40rem) {
       background-image: url(../images/tabBijouBG.png);
@@ -2598,6 +2686,16 @@
   .md\:w-120 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 120);
+    }
+  }
+  .md\:w-\[400px\] {
+    @media (width >= 48rem) {
+      width: 400px;
+    }
+  }
+  .md\:w-\[500px\] {
+    @media (width >= 48rem) {
+      width: 500px;
     }
   }
   .md\:bg-\[url\(\.\.\/images\/tab2BijouBG\.png\)\] {
@@ -2620,9 +2718,24 @@
       height: 50%;
     }
   }
+  .lg\:h-\[100vh\] {
+    @media (width >= 64rem) {
+      height: 100vh;
+    }
+  }
+  .lg\:w-\[40vw\] {
+    @media (width >= 64rem) {
+      width: 40vw;
+    }
+  }
   .lg\:w-\[50\%\] {
     @media (width >= 64rem) {
       width: 50%;
+    }
+  }
+  .lg\:w-\[100vw\] {
+    @media (width >= 64rem) {
+      width: 100vw;
     }
   }
   .lg\:w-\[300px\] {
@@ -2635,9 +2748,14 @@
       flex-direction: row;
     }
   }
-  .lg\:items-center {
+  .lg\:items-start {
     @media (width >= 64rem) {
-      align-items: center;
+      align-items: flex-start;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
     }
   }
   .lg\:justify-start {
@@ -2645,10 +2763,50 @@
       justify-content: flex-start;
     }
   }
+  .lg\:rounded-\[0px\] {
+    @media (width >= 64rem) {
+      border-radius: 0px;
+    }
+  }
   .lg\:rounded-t-\[15px\] {
     @media (width >= 64rem) {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+    }
+  }
+  .lg\:p-10 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:p-12 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:p-15 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 15);
+    }
+  }
+  .lg\:p-\[5rem\] {
+    @media (width >= 64rem) {
+      padding: 5rem;
+    }
+  }
+  .lg\:p-\[8rem\] {
+    @media (width >= 64rem) {
+      padding: 8rem;
+    }
+  }
+  .lg\:p-\[10rem\] {
+    @media (width >= 64rem) {
+      padding: 10rem;
+    }
+  }
+  .lg\:p-\[20rem\] {
+    @media (width >= 64rem) {
+      padding: 20rem;
     }
   }
   .lg\:px-0 {
@@ -2682,24 +2840,9 @@
       font-size: 22px;
     }
   }
-  .xl\:hidden {
-    @media (width >= 80rem) {
-      display: none;
-    }
-  }
   .xl\:bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
     @media (width >= 80rem) {
       background-image: url(../images/xlBijouBG.png);
-    }
-  }
-  .xl\:bg-\[center_bottom_3rem\] {
-    @media (width >= 80rem) {
-      background-position: center bottom 3rem;
-    }
-  }
-  .xl\:bg-\[center_top_2rem\] {
-    @media (width >= 80rem) {
-      background-position: center top 2rem;
     }
   }
 }
