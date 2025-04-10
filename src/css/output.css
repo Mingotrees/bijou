@@ -851,6 +851,9 @@
   .h-\[85px\] {
     height: 85px;
   }
+  .h-\[90vh\] {
+    height: 90vh;
+  }
   .h-\[130px\] {
     height: 130px;
   }
@@ -1628,9 +1631,6 @@
   .bg-\[\#f8e8e6\] {
     background-color: #f8e8e6;
   }
-  .bg-\[\.\.\/images\/mobileBijouBG\.png\] {
-    background-color: ../images/mobileBijouBG.png;
-  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
@@ -1684,6 +1684,15 @@
   }
   .bg-\[url\(\.\.\/images\/mobileBijouBG\.png\)\] {
     background-image: url(../images/mobileBijouBG.png);
+  }
+  .bg-\[url\(\.\.\/images\/tabBijouBG\.png\)\] {
+    background-image: url(../images/tabBijouBG.png);
+  }
+  .bg-\[url\(\.\.\/images\/xlBijou\.png\)\] {
+    background-image: url(../images/xlBijou.png);
+  }
+  .bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
+    background-image: url(../images/xlBijouBG.png);
   }
   .bg-none {
     background-image: none;
@@ -2581,9 +2590,19 @@
       }
     }
   }
+  .sm\:bg-\[url\(\.\.\/images\/tabBijouBG\.png\)\] {
+    @media (width >= 40rem) {
+      background-image: url(../images/tabBijouBG.png);
+    }
+  }
   .md\:w-120 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 120);
+    }
+  }
+  .md\:bg-\[url\(\.\.\/images\/tab2BijouBG\.png\)\] {
+    @media (width >= 48rem) {
+      background-image: url(../images/tab2BijouBG.png);
     }
   }
   .lg\:block {
@@ -2632,11 +2651,6 @@
       border-top-right-radius: 15px;
     }
   }
-  .lg\:bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
-    @media (width >= 64rem) {
-      background-image: url(../images/xlBijouBG.png);
-    }
-  }
   .lg\:px-0 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 0);
@@ -2668,14 +2682,24 @@
       font-size: 22px;
     }
   }
+  .xl\:hidden {
+    @media (width >= 80rem) {
+      display: none;
+    }
+  }
   .xl\:bg-\[url\(\.\.\/images\/xlBijouBG\.png\)\] {
     @media (width >= 80rem) {
       background-image: url(../images/xlBijouBG.png);
     }
   }
-  .xl\:bg-top {
+  .xl\:bg-\[center_bottom_3rem\] {
     @media (width >= 80rem) {
-      background-position: top;
+      background-position: center bottom 3rem;
+    }
+  }
+  .xl\:bg-\[center_top_2rem\] {
+    @media (width >= 80rem) {
+      background-position: center top 2rem;
     }
   }
 }
