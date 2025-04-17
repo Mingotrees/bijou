@@ -12,7 +12,7 @@ function toggleCategories() {
     closeCategoriesSidebar();
   } else {
     categoriesSidebar.classList.replace('-translate-x-full', 'translate-x-0');
-    categoriesSidebar.classList.add('z-10');
+    categoriesSidebar.classList.add('z-40');
     darkOverlay.classList.remove('hidden');
   }
 }

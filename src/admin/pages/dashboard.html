@@ -4,22 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/output.css" />
-    <title>Products - Admin</title>
+    <title>Dashboard - Admin</title>
   </head>
   <body class="bg-[#FFDAD4] min-h-screen overflow-x-hidden">
     <!-- Dark Overlay -->
-    <div
-      id="dark-overlay"
-      class="fixed inset-0 bg-black opacity-30 hidden z-20"
-    ></div>
+    <div id="dark-overlay" class="dark-overlay hidden"></div>
 
     <div class="flex w-screen min-h-screen">
       <!-- Sidebar Mobile -->
       <div
         id="categories-sidebar"
-        class="fixed left-0 top-0 h-full w-full md:w-120 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 flex flex-col z-30"
+        class="mobile-sidebar -translate-x-full transition-transform duration-300"
       >
-        <div class="h-[85px] bg-dark-pink flex items-center px-4 relative">
+        <div class="mobile-sidebar-header">
           <div class="absolute left-1/2 -translate-x-1/2">
             <img
               src="/src/images/logoWhiteWords.png"
@@ -27,10 +24,7 @@
               class="w-[130px]"
             />
           </div>
-          <div
-            class="flex justify-center items-center p-2 rounded-md cursor-pointer hover:bg-[#c49589] ml-auto"
-            id="close2"
-          >
+          <div class="mobile-sidebar-closeBtn" id="close2">
             <img
               src="/src/images/x-symbol-svgrepo-com.svg"
               alt=""
@@ -44,7 +38,7 @@
           <li>
             <a
               href="/src/admin/pages/dashboard.html"
-              class="flex items-center gap-2 text-[#D2A49C] bg-[#f8e8e6] hover:text-[#D2A49C] rounded-lg p-2 duration-150"
+              class="sidebar-link-chosen"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,10 +70,7 @@
             </a>
           </li>
           <li>
-            <a
-              href="/src/admin/pages/products.html"
-              class="flex items-center gap-2 text-[#374151] font-semibold hover:bg-[#f8e8e6] p-2 rounded-lg"
-            >
+            <a href="/src/admin/pages/products.html" class="sidebar-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20px"
@@ -98,10 +89,7 @@
             </a>
           </li>
           <li>
-            <a
-              href="/src/admin/pages/sales.html"
-              class="flex items-center gap-2 text-[#374151] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
-            >
+            <a href="/src/admin/pages/sales.html" class="sidebar-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20px"
@@ -124,15 +112,11 @@
       </div>
 
       <!-- Sidebar -->
-      <div class="hidden lg:block w-70 flex justify-center items-center p-6">
+      <div class="sidebar-lg-screen">
         <!-- Sidebar Card -->
-        <div
-          class="w-full h-full bg-pinkish-white rounded-[15px] flex flex-col"
-        >
+        <div class="sidebar-card">
           <!-- Logo -->
-          <div
-            class="h-[85px] bg-dark-pink rounded-t-[15px] flex justify-center items-center"
-          >
+          <div class="sidebar-logo">
             <img
               src="/src/images/logoWhiteWords.png"
               alt=""
@@ -145,7 +129,7 @@
             <li>
               <a
                 href="/src/admin/pages/dashboard.html"
-                class="flex items-center gap-2 bg-[#f8e8e6] rounded-lg p-2 duration-150"
+                class="sidebar-link-chosen"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -177,10 +161,7 @@
               </a>
             </li>
             <li>
-              <a
-                href="/src/admin/pages/products.html"
-                class="flex items-center gap-2 text-[#374151] font-semibold hover:bg-[#f8e8e6] p-2 rounded-lg"
-              >
+              <a href="/src/admin/pages/products.html" class="sidebar-link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20px"
@@ -199,10 +180,7 @@
               </a>
             </li>
             <li>
-              <a
-                href="/src/admin/pages/sales.html"
-                class="flex items-center gap-2 text-[#374151] hover:bg-[#f8e8e6] rounded-lg p-2 duration-150"
-              >
+              <a href="/src/admin/pages/sales.html" class="sidebar-link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20px"
@@ -224,15 +202,13 @@
           </ul>
         </div>
       </div>
-      <div class="flex-1 lg:pr-6 lg:pt-6 lg:pb-6 flex flex-col min-h-screen">
+
+      <!-- Main Container -->
+      <div class="main-container">
         <!-- Nav for Mobile-->
-        <nav
-          class="bg-pinkish-white h-[70px] w-full rounded-b-[15px] flex justify-center items-center px-5 lg:rounded-t-[15px]"
-        >
+        <nav class="mobile-nav">
           <!-- header content MOBILE -->
-          <div
-            class="flex items-center w-full justify-between lg:justify-start"
-          >
+          <div class="mobile-nav-header">
             <!-- logo & hamburger -->
             <div class="flex gap-1 items-center">
               <!-- hamburger icon -->
@@ -257,21 +233,22 @@
         </nav>
 
         <!-- main content -->
-        <div class="flex-1 px-5 mt-6 lg:px-0 flex flex-col gap-5">
-          <div class="flex flex-col gap-5 lg:flex-row">
+        <div class="main-content-container">
+          <!-- 1st Section -->
+          <div class="flex flex-col gap-5 lg:flex-row lg:h-[400px]">
             <div class="flex flex-col gap-5 lg:w-[50%]">
               <!-- Revenue Card -->
               <div
                 class="bg-pinkish-white w-full h-[130px] lg:h-[50%] rounded-3xl drop-shadow-lg"
               >
                 <!-- header -->
-                <div
-                  class="w-full h-[35%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-                >
+                <div class="card-header">
                   <h2 class="text-pinkish-white">Monthly Revenue</h2>
                 </div>
                 <!-- text-content -->
-                <div class="px-5 h-[67%] flex justify-center items-center gap-3">
+                <div
+                  class="px-5 h-[70px] lg:h-[120px] flex justify-center items-center gap-3"
+                >
                   <div
                     class="text-2xl lg:text-4xl text-dark-pink font-bold text-right"
                   >
@@ -284,20 +261,18 @@
                   </div>
                 </div>
               </div>
-  
+
               <!-- Total Earnings Card -->
               <div
                 class="bg-pinkish-white w-full h-[135px] lg:h-[50%] rounded-3xl drop-shadow-lg"
               >
                 <!-- header -->
-                <div
-                  class="w-full h-[35%] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-                >
+                <div class="card-header">
                   <h2 class="text-pinkish-white">Total Earnings</h2>
                 </div>
                 <!-- text-content -->
                 <div
-                  class="px-5 h-[67%] flex justify-center items-center gap-5 text-[#D2A49C]"
+                  class="px-5 h-[70px] lg:h-[120px] flex justify-center items-center gap-5 text-[#D2A49C]"
                 >
                   <div class="text-2xl lg:text-4xl font-bold">
                     Php <span id="amount">200,000.00</span>
@@ -308,59 +283,53 @@
 
             <!-- Order Summary Card -->
             <div
-          class="bg-pinkish-white w-full lg:w-[50%] h-[230px] rounded-3xl drop-shadow-lg"
-        >
-          <!-- header -->
-          <div
-            class="w-full h-15 bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-          >
-            <h2 class="text-pinkish-white">Order Summary</h2>
-          </div>
-
-          <div class="pb-4 pt-4">
-            <!-- main content card -->
-            <div
-              class="px-5 pb-2 h-[80%] flex justify-evenly items-center text-pink"
+              class="bg-pinkish-white w-full lg:w-[50%] h-auto lg:h-full rounded-3xl drop-shadow-lg"
             >
-              <!-- pending card -->
-              <div
-                class="w-[150px] lg:w-[300px] h-[140px] text-red-500 rounded-2xl bg-red-200 p-3 flex flex-col justify-between mr-2"
-              >
-                <!-- card content -->
-                <h2
-                  class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
-                >
-                  Pending Orders
-                </h2>
-                <h2 class="text-right font-bold text-[50px]">90</h2>
+              <!-- header -->
+              <div class="card-header">
+                <h2 class="text-pinkish-white">Order Summary</h2>
               </div>
-              <!-- completed card -->
-              <div
-                class="w-[150px] lg:w-[300px] h-[140px] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
-              >
-                <!-- card content -->
-                <h2
-                  class="text-left text-wrap font-semibold opacity-100 lg:text-[22px] text-[18px]"
-                >
-                  Completed Orders
-                </h2>
-                <h2 class="text-right font-bold text-[50px]">120</h2>
-              </div>
-            </div>
-          </div>
-            </div>
-          </div>
-          
 
-          
+              <div
+                class="h-auto lg:h-[340px] flex flex-col xl:flex-row justify-center items-center gap-5 p-4"
+              >
+                <!-- pending card -->
+                <div
+                  class="w-full xl:w-[50%] h-[120px] lg:h-[50%] text-red-500 rounded-2xl xl:h-[250px] bg-red-200 p-3 flex flex-col justify-between"
+                >
+                  <!-- card content -->
+                  <h2
+                    class="text-left text-wrap font-semibold opacity-100 text-[18px] lg:text-[30px]"
+                  >
+                    Pending Orders
+                  </h2>
+                  <h2 class="text-right font-bold text-[30px] lg:text-[50px]">
+                    90
+                  </h2>
+                </div>
+                <!-- completed card -->
+                <div
+                  class="w-full xl:w-[50%] h-[120px] xl:h-[250px] lg:h-[50%] text-green-500 rounded-2xl bg-green-200 p-3 flex flex-col justify-between"
+                >
+                  <!-- card content -->
+                  <h2
+                    class="text-left text-wrap font-semibold opacity-100 text-[18px] lg:text-[30px]"
+                  >
+                    Completed Orders
+                  </h2>
+                  <h2 class="text-right font-bold text-[30px] lg:text-[50px]">
+                    120
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Recent Orders Card -->
           <div
-            class="bg-pinkish-white w-full rounded-3xl drop-shadow-lg flex flex-col"
+            class="bg-pinkish-white w-full rounded-3xl drop-shadow-lg flex flex-col text-[10px] md:text-[16px]"
           >
-            <div
-              class="w-full h-[60px] bg-dark-pink rounded-t-3xl flex items-center px-4 justify-between"
-            >
+            <div class="card-header">
               <div class="flex items-center gap-3">
                 <h2 class="text-pinkish-white text-xl font-semibold">
                   Recent Orders
@@ -403,9 +372,7 @@
                   <div class="flex justify-center">Status</div>
                 </div>
                 <!-- sample rows -->
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -418,9 +385,7 @@
                   </div>
                 </div>
 
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -432,9 +397,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -446,9 +409,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -460,9 +421,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -474,9 +433,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -488,9 +445,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -502,9 +457,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
@@ -516,9 +469,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="grid grid-cols-4 items-center font-medium h-12 border-b border-[#F2CBC4] hover:bg-[#F2CBC4]/10"
-                >
+                <div class="order-row">
                   <div class="flex justify-center">BJ#-0123</div>
                   <div class="flex justify-center">Jhanell Mingo</div>
                   <div class="flex justify-center">Php 250.00</div>
